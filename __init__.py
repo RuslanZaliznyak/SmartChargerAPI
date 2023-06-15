@@ -9,7 +9,7 @@ def create_app(config_class=Config):
     app.config.from_object(config_class)
     db.init_app(app)
 
-    from api.routes import bp as api_bp
+    from app.api.routes import bp as api_bp
     app.register_blueprint(api_bp)
 
     return app
