@@ -1,4 +1,11 @@
+import os
+
+from dotenv import load_dotenv
+
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:pabxy6-rIqtow-hisbum@localhost:3306/SmartChargerAPI'
+    load_dotenv('.env')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
+
+    SECRET_KEY = os.environ.get('SECRET_KEY')

@@ -9,7 +9,6 @@ class Record(db.Model):
     barcode = db.Column(db.Integer, unique=True)
     params_id = db.Column(db.Integer, db.ForeignKey('parameters.id'))
     datetime = db.Column(db.DateTime)
-
     parameters = db.relationship('Parameters', backref='record')
 
 

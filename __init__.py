@@ -1,11 +1,11 @@
 from flask import Flask
 from app.config import Config
 from app.extensions import db
+from dotenv import load_dotenv
 
 
 def create_app(config_class=Config):
     app = Flask(__name__)
-
     app.config.from_object(config_class)
     db.init_app(app)
 
@@ -17,4 +17,4 @@ def create_app(config_class=Config):
 
 if __name__ == '__main__':
     app = create_app()
-    app.run()
+    app.run(port=5001)
