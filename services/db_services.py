@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import and_
 
 from app.extensions import db
@@ -7,6 +7,8 @@ from app.validator.charger_models_validator import ChargerInput
 from app.services.api_services import APIHandler
 from app.models.charger_models import Record, Parameters, Voltage, Temperature
 from sqlalchemy.ext.declarative import DeclarativeMeta
+
+
 
 
 class DataBaseManager:

@@ -1,3 +1,5 @@
+from sqlalchemy.ext.declarative import declarative_base
+
 from app.extensions import db
 from sqlalchemy import DECIMAL
 from pydantic import BaseModel
